@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>FPTShop</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.footer.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/icon-fptshop.css" />
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- jsLib -->
+    <script src="js/libs/jquery-3.2.0.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+    <script src="js/libs/nouislider.min.js"></script>
+    <script src="js/libs/wNumb.js"></script>
+    <script src="js/libs/lightgallery-all.min.js"></script>
+    <script src="js/libs/lightslider.min.js"></script>
+    <script src="js/libs/spritespin.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/modal.js"></script>
+  </head>
+  <body class=""> 
+    <div
+      class="btn btn-primary btn-xl btn-full js--open--normal"
+      aria-controls="js--popup-cart--expand"
+    >
+      <div><strong>Boor sung so dia chi</strong></div>
+    </div> 
+    <!-- <div class="modal js-modal c-popup-warning c-cart" id="js--popup" data-animation="on">
+			<div class="c-modal__wrapper">
+				<div class="c-modal__box">
+					<div class="card card--popup-warning">
+						<button class="c-modal--close js-modal__close"></button>
+						<div class="card-body">
+							<div class="c-popup-warning__shape">
+								<span class="icon-ok-circled"></span>
+							</div>
+							<div class="text--lg text-size--lg">
+								Đơn hàng đang được bộ phận chăm sóc khách hàng xử lý
+							</div>
+							<div class="text--normal text-size--normal">
+								Xin cảm ơn quý khách đã mua hàng tại Fptshop.com.vn.
+							</div>
+						</div>
+						<div class="card-footer">
+							<button class="btn btn-outline-secondary js-modal__close">Về trang chủ</button>
+							<button class="btn btn-primary">Tra cứu đơn hàng</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+    <!-- cart expand  -->
+    <div
+      class="modal js-modal c-cart js--popup-dropdown modal--is-visible"
+      id="js--popup-cart--expand"
+      data-animation="on"
+    >
+      <div class="c-modal__wrapper">
+        <div class="c-modal__box">
+          <div class="card">
+            <div class="card-title">
+              Có 2 sản phẩm trong giỏ hàng
+              <span class="c-modal--close js-modal__close"></span>
+            </div>
+            <div class="card-body">
+              <div class="cs-toast cs-toast--success border-radius--none">
+                <span class="icon-ok-circled"></span>
+                Áp dụng thành công giảm thêm 3%. Ưu đãi dành cho thành viên
+                F.Friends.
+              </div>
+              <div class="c-cart__block">
+                <div class="c-cart__product">
+                  <div class="product-cart">
+                    <div class="product-cart__img">
+                      <img src="https://via.placeholder.com/80" alt="" />
+                    </div>
+                    <div class="product-cart__info">
+                      <div class="product-cart__inside">
+                        <a href="#" class="product-cart__line">
+                          <h3 class="product-cart__name product-cart__name--lg">
+                            iPhone 11 Pro Max 64GB
+                          </h3>
+                        </a>
+                        <div class="product-cart__line">
+                          <div class="c-dropdown">
+                            <div class="c-dropdown-button">
+                              Vàng đồng
+                              <span class="icon-arrow-combo"></span>
+                            </div>
+                            <div class="c-dropdown-menu">
+                              <div class="c-dropdown-menu__wrapper">
+                                <a href="#" class="active">Giá cao nhất</a>
+                                <a href="#">Giá cao nhất</a>
+                                <a href="#">Giá thấp nhất</a>
+                                <a href="#">Hàng mới về</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-cart__line">
+                          <div class="c-dropdown">
+                            <div class="c-dropdown-button">
+                              PMH 500K + Balo Laptop + SDP 10.000mAh
+                              <span class="icon-arrow-combo"></span>
+                            </div>
+                            <div class="c-dropdown-menu">
+                              <div class="c-dropdown-menu__wrapper">
+                                <a href="#" class="active">Giá cao nhất</a>
+                                <a href="#">Giá cao nhất</a>
+                                <a href="#">Giá thấp nhất</a>
+                                <a href="#">Hàng mới về</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="product-cart__list">
+                          <li>Thu cũ đổi mới lên tới 14 triệu</li>
+                          <li>Tặng suất mua Đồng hồ thời trang giảm đến 40%</li>
+                        </ul>
+                      </div>
+                      <div class="product-cart__quality">
+                        <div class="product-cart__quality__wrap">
+                          <button
+                            type="button"
+                            class="cs-btn btn disabled js--btn-minus"
+                          >
+                            <span class="icon-minus"></span>
+                          </button>
+                          <input
+                            type="text"
+                            id="1"
+                            value="1"
+                            readonly
+                            class="cs-input"
+                          />
+                          <button type="button" class="cs-btn btn js--btn-plus">
+                            <span class="icon-plus"></span>
+                          </button>
+                        </div>
+                        <div class="product-cart__remove">
+                          <span class="icon-trash"></span> Xoá
+                        </div>
+                      </div>
+                      <div class="product-cart__price">
+                        <div class="cs-price cs-price--main">27.990.000₫</div>
+                        <div class="cs-price cs-price--sub">33.990.000₫</div>
+                      </div>
+                      <div class="product-cart__combo">
+                        <div class="st-boxFeature js--boxFeature">
+                          <ul>
+                            <li>
+                              <span class="img">
+                                <img
+                                  src="https://via.placeholder.com/50"
+                                  alt=""
+                                />
+                                <div class="e-label-pos">
+                                  <div class="checkbox">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="check2"
+                                      required=""
+                                      checked=""
+                                    />
+                                  </div>
+                                </div>
+                              </span>
+                              <div class="text">
+                                <div>
+                                  Mua gói bảo hành chính hãng mở rộng 24 tháng
+                                </div>
+                              </div>
+                              <div
+                                class="cs-price cs-price--main product-cart__combo__price"
+                              >
+                                429.000₫
+                              </div>
+                            </li>
+                            <li>
+                              <div class="img">
+                                <img
+                                  src="https://via.placeholder.com/50"
+                                  alt=""
+                                />
+                                <div class="e-label-pos">
+                                  <div class="checkbox">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="check2"
+                                      required=""
+                                      checked=""
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="text">
+                                <div>
+                                  Giảm thêm 5% tối đa
+                                  <strong>200,000đ</strong> khi thanh toán 100%
+                                  qua VNPAY-QR.
+                                </div>
+                              </div>
+                              <div
+                                class="cs-price cs-price--main product-cart__combo__price"
+                              >
+                                -200.000₫
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-cart__product">
+                  <div class="product-cart">
+                    <div class="product-cart__img">
+                      <img src="https://via.placeholder.com/80" alt="" />
+                    </div>
+                    <div class="product-cart__info">
+                      <div class="product-cart__inside">
+                        <a href="#" class="product-cart__line">
+                          <h3 class="product-cart__name product-cart__name--lg">
+                            Bộ phần mềm Microsoft 365 Personal
+                          </h3>
+                        </a>
+                        <ul class="product-cart__list">
+                          <li>• Ưu đãi áp dụng khi mua kèm Laptop</li>
+                        </ul>
+                      </div>
+                      <div class="product-cart__quality">
+                        <div class="product-cart__quality__wrap">
+                          <button
+                            type="button"
+                            class="cs-btn btn disabled js--btn-minus"
+                          >
+                            <span class="icon-minus"></span>
+                          </button>
+                          <input
+                            type="text"
+                            id="1"
+                            value="1"
+                            readonly
+                            class="cs-input"
+                          />
+                          <button type="button" class="cs-btn btn js--btn-plus">
+                            <span class="icon-plus"></span>
+                          </button>
+                        </div>
+                        <div class="product-cart__remove">
+                          <span class="icon-trash"></span> Xoá
+                        </div>
+                      </div>
+                      <div class="product-cart__price">
+                        <div class="cs-price cs-price--main">690.000₫</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-cart__gift">
+                <div class="c-cart__gift__title text--sm margin-bottom-2x">
+                  <span class="icon-gift"></span>
+                  <span class="margin-left-sm"
+                    >Quà tặng cho đơn hàng trên 5 triệu</span
+                  >
+                </div>
+                <div class="item margin-bottom-2x">
+                  <div class="img margin-right">
+                    <img src="https://via.placeholder.com/80" alt="" />
+                  </div>
+                  <div class="info">
+                    <a href="#">
+                      <h3
+                        class="text--lg text-size-normal text-color-title margin-bottom-sm"
+                      >
+                        Pin sạc dự phòng Li-polymer 10000mAH UMETRAVEL TRIP10C
+                      </h3>
+                    </a>
+                    <div class="text-normal text-color-info">
+                      Trị giá 599.000đ
+                      <a href="#" class="re-link">Xem chi tiết</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item margin-bottom-2x">
+                  <div class="img margin-right">
+                    <img src="https://via.placeholder.com/30" alt="" />
+                  </div>
+                  <div class="info">
+                    <a href="#">
+                      <h3
+                        class="text--lg text-size-normal text-color-title margin-bottom-sm"
+                      >
+                        Pin sạc dự phòng Li-polymer 10000mAH UMETRAVEL TRIP10C
+                      </h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Chưa login -->
+              <div class="c-cart__loyalty">
+                <div class="switch">
+                  <input id="cb1c3" type="checkbox" />
+                  <label class="switch-label" for="cb1c3"></label>
+                  <label for="cb1c3" class="label">
+                    <div class="label-text">
+                      <span class="icon">F</span>
+                      <span class="text"
+                        >Đổi điểm thành Voucher thanh toán</span
+                      >
+                      <div class="tooltip tooltip-dark">
+                        <i class="ic-info"></i>
+                        <div class="tooltip-box">
+                          <div class="f-s-p-14">
+                            Điểm thưởng khi mua hàng. Quý khách có thể sử dụng
+                            đổi thành Voucher khi thanh toán.
+                            <a href="#" aria-controls="popup-tl-loyalty"
+                              >Xem chi tiết</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <!-- Đã login -->
+              <div class="c-cart__loyalty">
+                <div class="flex flex-between">
+                  <div class="switch">
+                    <input id="cb1c4" type="checkbox" />
+                    <label class="switch-label" for="cb1c4"></label>
+                    <label for="cb1c4" class="label">
+                      <div class="label-text m-l-16">
+                        <span class="text m-r-4">Đổi</span>
+                        <span class="icon">F</span>
+                        <span class="loyalty-score">3.000 điểm</span>
+                        <span class="text">điểm thành Voucher thanh toán</span>
+                        <div class="tooltip tooltip-dark">
+                          <i class="ic-info"></i>
+                          <div class="tooltip-box">
+                            <div class="f-s-p-14">
+                              Điểm thưởng khi mua hàng. Quý khách có thể sử dụng
+                              đổi thành Voucher khi thanh toán.
+                              <a href="#" aria-controls="popup-tl-loyalty"
+                                >Xem chi tiết</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="discount active">-300.000<span>đ</span></div>
+                </div>
+                <div class="wrap">
+                  <div class="js-slider slider slider-circle slider-md"></div>
+                  <div class="group">
+                    <input type="text" name="" id="" value="3000" />
+                    <button>điểm</button>
+                    <div class="feedback">
+                      <div class="stack">
+                        <span class="icon-minus-circled"></span>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-cart__center">
+                <div class="c-cart__coupon">
+                  <div class="c-cart__title">Mã giảm giá</div>
+                  <div class="cs-input-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="cs-input"
+                      placeholder="Nhập mã giảm giá"
+                    />
+                    <button class="cs-btn btn btn-primary">Áp dụng</button>
+                  </div>
+                  <div class="tags">
+                    <div class="tag">
+                      <i class="icon-tag"></i>
+                      <span>IPHONE15</span>
+                      <i class="icon-cancel"></i>
+                    </div>
+                    <div class="tag">
+                      <i class="icon-tag"></i>
+                      <span>IPHONE15</span>
+                      <i class="icon-cancel"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-cart__total">
+                  <p class="text-normal">
+                    <span>Tổng tiền:</span>
+                    <span>35.109.000đ</span>
+                  </p>
+                  <p class="text-normal">
+                    <span>Giảm:</span>
+                    <span>-6.200.000đ</span>
+                  </p>
+                  <p class="text-normal">
+                    <span>Voucher:</span>
+                    <span>-200.000₫</span>
+                  </p>
+                  <p class="text--lg">
+                    <span class="text-size--lg">Cần thanh toán:</span>
+                    <span class="re-price re-red">28.909.000đ</span>
+                  </p>
+                </div>
+              </div>
+              <div class="c-cart__product-suggest">
+                <div class="title">
+                  <span class="text-normal">Bạn có thể muốn mua cùng</span>
+                </div>
+                <div class="c-cart__product-suggest__wrap">
+                  <div
+                    class="swiper-container swiper-custom js--cart__product-suggest"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide st-promoProduct__item">
+                        <a href="#" class="img">
+                          <img src="https://via.placeholder.com/70" alt="" />
+                        </a>
+                        <div class="info">
+                          <div class="top">
+                            <a href="#">
+                              <h3 class="name">
+                                Apple Watch Series 3 GPS, 38mm viền nhôm dây cao
+                                su trắng MTEYVN/A
+                              </h3>
+                            </a>
+                          </div>
+                          <div class="center">
+                            <div class="re-price re-red">5.490.000₫</div>
+                            <div class="re-price-strike">1040.000₫</div>
+                            <div class="addToCard">Thêm vào giỏ hàng</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide st-promoProduct__item">
+                        <a href="#" class="img">
+                          <img src="https://via.placeholder.com/70" alt="" />
+                        </a>
+                        <div class="info">
+                          <div class="top">
+                            <a href="#">
+                              <h3 class="name">
+                                Apple Watch Series 3 GPS, 38mm viền nhôm dây cao
+                                su trắng MTEYVN/A
+                              </h3>
+                            </a>
+                          </div>
+                          <div class="center">
+                            <div class="re-price re-red">5.490.000₫</div>
+                            <div class="re-price-strike">1040.000₫</div>
+                            <div class="addToCard">Thêm vào giỏ hàng</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide st-promoProduct__item">
+                        <a href="#" class="img">
+                          <img src="https://via.placeholder.com/70" alt="" />
+                        </a>
+                        <div class="info">
+                          <div class="top">
+                            <a href="#">
+                              <h3 class="name">
+                                Apple Watch Series 3 GPS, 38mm viền nhôm dây cao
+                                su trắng MTEYVN/A
+                              </h3>
+                            </a>
+                          </div>
+                          <div class="center">
+                            <div class="re-price re-red">5.490.000₫</div>
+                            <div class="re-price-strike">1040.000₫</div>
+                            <div class="addToCard">Thêm vào giỏ hàng</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide st-promoProduct__item">
+                        <a href="#" class="img">
+                          <img src="https://via.placeholder.com/70" alt="" />
+                        </a>
+                        <div class="info">
+                          <div class="top">
+                            <a href="#">
+                              <h3 class="name">
+                                Apple Watch Series 3 GPS, 38mm viền nhôm dây cao
+                                su trắng MTEYVN/A
+                              </h3>
+                            </a>
+                          </div>
+                          <div class="center">
+                            <div class="re-price re-red">5.490.000₫</div>
+                            <div class="re-price-strike">1040.000₫</div>
+                            <div class="addToCard">Thêm vào giỏ hàng</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide st-promoProduct__item">
+                        <a href="#" class="img">
+                          <img src="https://via.placeholder.com/70" alt="" />
+                        </a>
+                        <div class="info">
+                          <div class="top">
+                            <a href="#">
+                              <h3 class="name">
+                                Apple Watch Series 3 GPS, 38mm viền nhôm dây cao
+                                su trắng MTEYVN/A
+                              </h3>
+                            </a>
+                          </div>
+                          <div class="center">
+                            <div class="re-price re-red">5.490.000₫</div>
+                            <div class="re-price-strike">1040.000₫</div>
+                            <div class="addToCard">Thêm vào giỏ hàng</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide st-promoProduct__item">
+                        <a href="#" class="img">
+                          <img src="https://via.placeholder.com/70" alt="" />
+                        </a>
+                        <div class="info">
+                          <div class="top">
+                            <a href="#">
+                              <h3 class="name">
+                                Apple Watch Series 3 GPS, 38mm viền nhôm dây cao
+                                su trắng MTEYVN/A
+                              </h3>
+                            </a>
+                          </div>
+                          <div class="center">
+                            <div class="re-price re-red">5.490.000₫</div>
+                            <div class="re-price-strike">1040.000₫</div>
+                            <div class="addToCard">Thêm vào giỏ hàng</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next">
+                    <span>
+                      <i class="icon-angle-right"></i>
+                    </span>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <span>
+                      <i class="icon-angle-left"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="block-loyalty">
+                <div class="c-cart__data-user">
+                  <div class="c-modal__row">
+                    <div class="st-table-title">
+                      <p>Thông tin khách hàng</p>
+                      <a href=""><i class="ic-edit"></i>Thay đổi</a>
+                    </div>
+                    <table class="st-table">
+                      <tbody>
+                        <tr>
+                          <td>Họ và tên</td>
+                          <td>Chị Lam</td>
+                        </tr>
+                        <tr>
+                          <td>Số điện thoại</td>
+                          <td>0945641098</td>
+                        </tr>
+                        <tr>
+                          <td>Email</td>
+                          <td>lamnguyen41098@gmail.com</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div> 
+                <div class="address">
+                    <div class="text">Vui lòng chọn địa chỉ:</div>
+                    <div class="group-btn">
+                      <div class="btn-address">Thêm mới</div>
+                      <div class="btn-address">Quản lý sổ địa chỉ</div>
+                    </div>
+                
+                </div>  
+                  <div class="user-edit-location" style="display: block">
+                    <div class="address">
+                      <div class="text">Vui lòng chọn địa chỉ:</div>
+                      <div class="group-btn">
+                        <div class="btn-address">Chọn lại địa chỉ</div>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="c-fs__location user-location">
+                    <ul>
+                      <li>
+                        <div class="radio">
+                          <input
+                            type="radio"
+                            value="radio-location"
+                            name="radio-location"
+                            id="location"
+                          />
+                          <label for="location">
+                            <div class="user-name">Nguyễn Hạ Lam</div>
+                            <div class="user-phone">0984531654</div>
+                          </label>
+                          <p class="user-loca">192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <input
+                            type="radio"
+                            value="radio-location"
+                            name="radio-location"
+                            id="location1"
+                          />
+                          <label for="location1">
+                            <div class="user-name">Nguyễn Hạ Lam</div>
+                            <div class="user-phone">0984531654</div>
+                          </label>
+                          <p class="user-loca">192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <input
+                            type="radio"
+                            value="radio-location"
+                            name="radio-location"
+                            id="location2"
+                          />
+                          <label for="location2">
+                            <div class="user-name">Nguyễn Hạ Lam</div>
+                            <div class="user-phone">0984531654</div>
+                          </label>
+                          <p class="user-loca">192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <input
+                            type="radio"
+                            value="radio-location"
+                            name="radio-location"
+                            id="location3"
+                          />
+                          <label for="location3">
+                            <div class="user-name">Nguyễn Hạ Lam</div>
+                            <div class="user-phone">0984531654</div>
+                          </label>
+                          <p class="user-loca">192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="c-fs__viewmore">
+                      <a href="#" class="re-link js--open-modal"
+                        >Xem thêm 2 địa chỉ
+                        <span class="icon-down-dir"></span
+                      ></a>
+                    </div>
+                  </div> 
+                </div>  
+              </div>
+              <div class="c-cart__form">                
+                <div class="c-cart__form__block ">
+                  <div class="c-cart__form__line margin-bottom">
+                    <div class="radio margin-right-2x">
+                      <input
+                        type="radio"
+                        value=""
+                        name="cart1"
+                        id="radio-cart1"
+                      />
+                      <label for="radio-cart1">Anh</label>
+                    </div>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value=""
+                        name="cart1"
+                        id="radio-cart2"
+                      />
+                      <label for="radio-cart2">Chị</label>
+                    </div>
+                  </div>
+                  <div
+                    class="c-cart__form__line margin-bottom c-cart__form__line--col"
+                  >
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="cs-input margin-right-2x cs-input--lg cs-input-size--half"
+                      placeholder="Nhập họ và tên*"
+                    />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="cs-input cs-input--lg cs-input-size--half"
+                      placeholder="Nhập số điện thoại*"
+                    />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="cs-input cs-input--lg cs-input-size--full"
+                      placeholder="Nhập email"
+                    />
+                  </div>
+                  <div class="c-cart__form__line margin-bottom-2x">
+                    <div class="c-cart__member">
+                      <div class="c-cart__member__wrap js--cart__toggle">
+                        <div class="text margin-right">
+                          Bạn có phải thành viên của:
+                        </div>
+                        <div class="checkbox margin-right-2x">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="cart3"
+                            required=""
+                            data-toggle="cart-toggle3"
+                          />
+                          <label class="form-check-label" for="cart3">
+                            F.Friends
+                          </label>
+                        </div>
+                        <div class="checkbox margin-right-2x">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="cart4"
+                            required=""
+                            data-toggle="cart-toggle4"
+                          />
+                          <label class="form-check-label" for="cart4">
+                            FPT Member
+                          </label>
+                        </div>
+                      </div>
+                      <div
+                        class="cs-input-group margin-top hide"
+                        id="cart-toggle3"
+                      >
+                        <input
+                          type="text"
+                          name=""
+                          id=""
+                          class="cs-input cs-input--lg"
+                          placeholder="Nhập chứng minh nhân dân*"
+                        />
+                        <button class="cs-btn btn cs-btn--lg btn-primary">
+                          Kiểm tra
+                        </button>
+                      </div>
+                      <div
+                        class="cs-input-group margin-top hide"
+                        id="cart-toggle4"
+                      >
+                        <input
+                          type="text"
+                          name=""
+                          id=""
+                          class="cs-input cs-input--lg"
+                          placeholder="Nhập email*"
+                        />
+                        <button class="cs-btn btn cs-btn--lg btn-primary">
+                          Kiểm tra
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary m-r-8 tooltip tooltip-right">
+                    Top
+                    <div class="tooltip-box">
+                      <ul>
+                        <li>- Lorem ipsum dolor sit.</li>
+                        <li>- Lorem, ipsum.</li>
+                        <li>- Lorem ipsum dolor sit amet.</li>
+                      </ul>
+                    </div>
+                  </button>
+                  
+                  <div class="c-cart__payment__line">
+                    <div class="text--normal text-size--lg">
+                      Thời gian giao hàng:
+                    </div>
+                    <div class="c-dropdown">
+                      <div class="c-dropdown-button active">
+                        PMH 500K + Balo Laptop + SDP 10.000mAh
+                        <span class="icon-arrow-combo"></span>
+                      </div>
+                      <div class="c-dropdown-menu">
+                        <div class="c-dropdown-menu__wrapper">
+                          <a href="#" class="active">Giá cao nhất</a>
+                          <a href="#">Giá cao nhất</a>
+                          <a href="#">Giá thấp nhất</a>
+                          <a href="#">Hàng mới về</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-cart__form__line">
+                    <div class="c-cart__title">Chọn hình thức giao hàng</div>
+                    <div class="c-cart__payment js--cart__tabs">
+                      <div class="c-cart__payment__wrap js-cart__methodship">
+                        <div class="radio margin-right-2x">
+                          <input
+                            type="radio"
+                            value=""
+                            name="deli"
+                            id="radio-cart31"
+                            class="js--tabs-child"
+                            data-toggle="c-cart__payment1"
+                          />
+                          <label for="radio-cart31"
+                            >Giao hàng tận nơi, miễn phí</label
+                          >
+                        </div>
+                        <div class="radio">
+                          <input
+                            type="radio"
+                            value=""
+                            name="deli"
+                            class="js--tabs-child"
+                            id="radio-cart41"
+                            data-toggle="c-cart__payment2"
+                          />
+                          <label for="radio-cart41"
+                            >Nhận tại cửa hàng FPT Shop</label
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="c-cart__payment__tab-item js--cart__tabs-item"
+                        id="c-cart__payment1"
+                      >
+                        <div class="c-cart__payment-block">
+                          <div class="c-cart__payment__inner">
+                            <div class="c-dropdown">
+                              <div class="c-dropdown-button">
+                                PMH 500K + Balo Laptop + SDP 10.000mAh
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Giá cao nhất</a>
+                                  <a href="#">Giá cao nhất</a>
+                                  <a href="#">Giá thấp nhất</a>
+                                  <a href="#">Hàng mới về</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="c-dropdown">
+                              <div class="c-dropdown-button">
+                                PMH 500K + Balo Laptop + SDP 10.000mAh
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Giá cao nhất</a>
+                                  <a href="#">Giá cao nhất</a>
+                                  <a href="#">Giá thấp nhất</a>
+                                  <a href="#">Hàng mới về</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="c-dropdown">
+                              <div class="c-dropdown-button">
+                                PMH 500K + Balo Laptop + SDP 10.000mAh
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Giá cao nhất</a>
+                                  <a href="#">Giá cao nhất</a>
+                                  <a href="#">Giá thấp nhất</a>
+                                  <a href="#">Hàng mới về</a>
+                                </div>
+                              </div>
+                            </div>
+                            <input
+                              type="text"
+                              name=""
+                              id=""
+                              class="cs-input cs-input--lg"
+                              placeholder="Nhập địa chỉ*"
+                            />
+                          </div>
+                          <div class="c-cart__payment__line">
+                            <div class="text--normal text-size--lg">
+                              Thời gian giao hàng:
+                            </div>
+                            <div class="c-dropdown">
+                              <div class="c-dropdown-button">
+                                PMH 500K + Balo Laptop + SDP 10.000mAh
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Giá cao nhất</a>
+                                  <a href="#">Giá cao nhất</a>
+                                  <a href="#">Giá thấp nhất</a>
+                                  <a href="#">Hàng mới về</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-cart__payment__line">
+                            <textarea
+                              type="text"
+                              class="cs-input cs-input--lg cs-textarea"
+                              placeholder="Ghi chú yêu cầu"
+                            ></textarea>
+                          </div>
+                          <div
+                            class="c-cart__payment__line c-cart__payment__service"
+                          >
+                            <div class="text-lg text-size--lg">
+                              Chọn thêm các dịch vụ/yêu cầu
+                            </div>
+                            <div class="checkbox margin-right-2x">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="check11b"
+                                required=""
+                              />
+                              <label
+                                class="form-check-label text-size--lg"
+                                for="check11b"
+                              >
+                                Hỗ trợ kỹ thuật
+                                <span class="icon-help-circled"></span>
+                                <span class="support"
+                                  >Nếu khách hàng có nhu cầu cài đặt, hướng dẫn
+                                  sử dụng và các vấn đề thắc mắc liên quan tới
+                                  sản phẩm đã chọn, vui lòng đánh dấu chọn để
+                                  nhận được sự phục vụ tốt nhất từ nhân viên kỹ
+                                  thuật của FPT Shop.</span
+                                >
+                              </label>
+                            </div>
+                            <div class="checkbox margin-right-2x">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="check11c"
+                                required=""
+                              />
+                              <label class="form-check-label" for="check11c">
+                                Xuất hoá đơn công ty
+                                <span class="icon-help-circled"></span
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="c-cart__payment__tab-item js--cart__tabs-item"
+                        id="c-cart__payment2"
+                        style="display: block"
+                      >
+                        <div class="c-cart__payment-block">
+                          <div class="c-cart__payment__inner">
+                            <div class="c-dropdown c-dropdown--col">
+                              <div class="c-dropdown-button">
+                                Chọn tỉnh/thành phố
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__top">
+                                  <div class="c-dropdown-menu__search">
+                                    <div
+                                      class="cs-input-group cs-input-group--search"
+                                    >
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        class="cs-input"
+                                      />
+                                      <span
+                                        class="icon-search cs-input-search"
+                                      ></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Hà Nội</a>
+                                  <a href="#">Hồ Chí Minh</a>
+                                  <a href="#">Đồng Tháp</a>
+                                  <a href="#">Đồng nai</a>
+                                  <a href="#">Thái Nguyên</a>
+                                  <a href="#">Gia Lai</a>
+                                  <a href="#">Nha Trang</a>
+                                  <a href="#">Quãng Ngãi</a>
+                                  <a href="#">An Giang</a>
+                                  <a href="#">Cà Mau</a>
+                                  <a href="#">Đà Nẵng</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="c-dropdown c-dropdown--col">
+                              <div class="c-dropdown-button">
+                                Chọn quận/huyện
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Quận 1</a>
+                                  <a href="#">Quận 2</a>
+                                  <a href="#">Quận 3</a>
+                                  <a href="#">Quận 4</a>
+                                  <a href="#">Quận 2</a>
+                                  <a href="#">Quận 3</a>
+                                  <a href="#">Quận 4</a>
+                                  <a href="#">Quận 2</a>
+                                  <a href="#">Quận 3</a>
+                                  <a href="#">Quận 4</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-cart__payment__line">
+                            <div
+                              class="cs-toast cs-toast-normal cs-toast--warning"
+                            >
+                              <span class="icon-exclamation icon-circle"></span>
+                              <div>
+                                Áp dụng thành công giảm thêm 3%. Ưu đãi dành cho
+                                thành viên F.Friends.
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="c-cart__payment__line c-cart__payment__location"
+                          >
+                            <div class="text-normal margin-bottom">
+                              Vui lòng
+                              <span class="badge badge-normal"
+                                >Hủy bỏ sản phẩm không có sẵn</span
+                              >
+                              hoặc chọn shop có hàng ngay bên dưới:
+                            </div>
+                            <div class="c-fs__location">
+                              <ul>
+                                <li>
+                                  <div class="radio">
+                                    <input
+                                      type="radio"
+                                      value="radio-location"
+                                      name="radio-location"
+                                      id="loca1"
+                                    />
+                                    <label for="loca1"
+                                      >192A Nguyễn Thị Định, P. An Phú , Quận 2,
+                                      Hồ Chí Minh</label
+                                    >
+                                    <span class="success">
+                                      <i class="icon-ok-circled"></i> Có
+                                      hàng</span
+                                    >
+                                    <a
+                                      href="https://goo.gl/maps/yZB1xe41sUbTKb9R9"
+                                      target="_blank"
+                                      class="c-fs-open-map btn btn-outline-light re-link--normal js--open-map"
+                                      ><i class="icon-location"></i> Xem bản
+                                      đồ</a
+                                    >
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="radio">
+                                    <input
+                                      type="radio"
+                                      value="radio-location"
+                                      name="radio-location"
+                                      id="loca2"
+                                    />
+                                    <label for="loca2"
+                                      >358 Nguyễn Duy Trinh, P. Bình Trưng Tây ,
+                                      Quận 2, Hồ Chí Minh</label
+                                    >
+                                    <span class="warning">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="17"
+                                        height="17"
+                                        fill="none"
+                                        viewBox="0 0 17 17"
+                                      >
+                                        <rect
+                                          width="16"
+                                          height="16"
+                                          x=".25"
+                                          y=".998"
+                                          fill="#EFB140"
+                                          rx="8"
+                                        />
+                                        <path
+                                          fill="#fff"
+                                          d="M8.19 3.998c-2.66 0-4.83 2.1-4.94 4.72-.01.19.13.2.13.2h.84c.16 0 .19-.1.19-.18.1-1.99 1.76-3.58 3.78-3.58 1.07 0 2.05.45 2.73 1.18l-.58.57c-.11.12-.11.27.05.31l2.47.5c.21.05.46-.11.37-.44l-.58-2.27c-.02-.09-.16-.22-.29-.13l-.65.6c-.89-.91-2.14-1.48-3.52-1.48zm4.09 5.08c-.16 0-.19.1-.19.18-.1 1.99-1.76 3.58-3.77 3.58-1.08 0-2.05-.45-2.74-1.18l.59-.57c.1-.12.1-.27-.05-.31l-2.48-.5c-.21-.05-.46.11-.37.44l.58 2.27c.02.089.16.22.3.129l.64-.6c.89.91 2.14 1.48 3.53 1.48 2.65 0 4.82-2.1 4.93-4.73.01-.18-.13-.19-.13-.19h-.84z"
+                                        />
+                                      </svg>
+                                      Tạm hết hàng- Đặt hàng lấy sau 2-7
+                                      ngày</span
+                                    >
+                                    <a
+                                      href="https://goo.gl/maps/yZB1xe41sUbTKb9R9"
+                                      target="_blank"
+                                      class="c-fs-open-map btn btn-outline-light re-link--normal js--open-map"
+                                      ><i class="icon-location"></i> Xem bản
+                                      đồ</a
+                                    >
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="radio">
+                                    <input
+                                      type="radio"
+                                      value="radio-location"
+                                      name="radio-location"
+                                      id="loca3"
+                                    />
+                                    <label for="loca3"
+                                      >141 Trần Não, Khu Phố 3, P. Bình An ,
+                                      Quận 2, Hồ Chí Minh</label
+                                    >
+                                    <span class="success">
+                                      <i class="icon-ok-circled"></i> Có
+                                      hàng</span
+                                    >
+                                    <a
+                                      href="https://goo.gl/maps/yZB1xe41sUbTKb9R9"
+                                      target="_blank"
+                                      class="c-fs-open-map btn btn-outline-light re-link--normal js--open-map"
+                                      ><i class="icon-location"></i> Xem bản
+                                      đồ</a
+                                    >
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="radio">
+                                    <input
+                                      type="radio"
+                                      value="radio-location"
+                                      name="radio-location"
+                                      id="loca4"
+                                    />
+                                    <label for="loca4"
+                                      >137 Tô Ngọc Vân, Khu Phố 4, P. Linh Tây ,
+                                      Quận Thủ Đức,
+                                    </label>
+                                    <span class="success">
+                                      <i class="icon-ok-circled"></i> Có
+                                      hàng</span
+                                    >
+                                    <a
+                                      href="https://goo.gl/maps/yZB1xe41sUbTKb9R9"
+                                      target="_blank"
+                                      class="c-fs-open-map btn btn-outline-light re-link--normal js--open-map"
+                                      ><i class="icon-location"></i> Xem bản
+                                      đồ</a
+                                    >
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="radio">
+                                    <input
+                                      type="radio"
+                                      value="radio-location"
+                                      name="radio-location"
+                                      id="loca5"
+                                    />
+                                    <label for="loca5"
+                                      >190 Nguyễn Thị Thập, P. Bình Thuận , Quận
+                                      7, Hồ Chí Minh</label
+                                    >
+                                    <span class="success">
+                                      <i class="icon-ok-circled"></i> Có
+                                      hàng</span
+                                    >
+                                    <a
+                                      href="https://goo.gl/maps/yZB1xe41sUbTKb9R9"
+                                      target="_blank"
+                                      class="c-fs-open-map btn btn-outline-light re-link--normal js--open-map"
+                                      ><i class="icon-location"></i> Xem bản
+                                      đồ</a
+                                    >
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="c-fs__viewmore">
+                                <a href="#" class="re-link js--open-modal"
+                                  >Xem thêm (8 shop)
+                                  <span class="icon-down-dir"></span
+                                ></a>
+                              </div>
+                            </div>
+                            <div class="c-fs__location">
+                              <ul>
+                                <li>
+                                  <div class="location-loading">
+                                    <div
+                                      class="location-loading__radio loads"
+                                    ></div>
+                                    <div class="location-loading__block">
+                                      <div
+                                        class="location-loading__line loads"
+                                        style="width: 100%"
+                                      ></div>
+                                      <div
+                                        class="location-loading__line loads"
+                                        style="width: 40%"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="location-loading">
+                                    <div
+                                      class="location-loading__radio loads"
+                                    ></div>
+                                    <div class="location-loading__block">
+                                      <div
+                                        class="location-loading__line loads"
+                                        style="width: 100%"
+                                      ></div>
+                                      <div
+                                        class="location-loading__line loads"
+                                        style="width: 40%"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="location-loading">
+                                    <div
+                                      class="location-loading__radio loads"
+                                    ></div>
+                                    <div class="location-loading__block">
+                                      <div
+                                        class="location-loading__line loads"
+                                        style="width: 100%"
+                                      ></div>
+                                      <div
+                                        class="location-loading__line loads"
+                                        style="width: 40%"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div
+                              class="cs-toast cs-toast-normal cs-toast--warning margin-top margin-bottom-empty"
+                            >
+                              <span class="icon-exclamation icon-circle"></span>
+                              <div>
+                                Sản phẩm tạm hết hàng tại shop. Đặt cọc 10% giá
+                                trị đơn hàng (tối thiểu 150.000đ) hoặc thanh
+                                toán toàn bộ để vận chuyển hàng về shop.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-cart__payment__line">
+                            <div class="text--normal text-size--lg">
+                              Thời gian giao hàng:
+                            </div>
+                            <div class="c-dropdown">
+                              <div class="c-dropdown-button">
+                                PMH 500K + Balo Laptop + SDP 10.000mAh
+                                <span class="icon-arrow-combo"></span>
+                              </div>
+                              <div class="c-dropdown-menu">
+                                <div class="c-dropdown-menu__wrapper">
+                                  <a href="#" class="active">Giá cao nhất</a>
+                                  <a href="#">Giá cao nhất</a>
+                                  <a href="#">Giá thấp nhất</a>
+                                  <a href="#">Hàng mới về</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c-cart__payment__line">
+                            <textarea
+                              type="text"
+                              class="cs-input cs-input--lg cs-textarea"
+                              placeholder="Ghi chú yêu cầu"
+                            ></textarea>
+                          </div>
+                          <div
+                            class="c-cart__payment__line c-cart__payment__service"
+                          >
+                            <div class="text-lg text-size--lg">
+                              Chọn thêm các dịch vụ/yêu cầu
+                            </div>
+                            <div class="checkbox margin-right-2x">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="check11bc"
+                                required=""
+                              />
+                              <label class="form-check-label" for="supportTech"
+                                >Hỗ trợ kỹ thuật
+                                <span
+                                  class="icon-help-circled cls-i-support"
+                                ></span
+                                ><span
+                                  class="support"
+                                  style="color: rgb(62, 102, 136)"
+                                  >Nếu khách hàng có nhu cầu cài đặt, hướng dẫn
+                                  sử dụng và các vấn đề thắc mắc liên quan tới
+                                  sản phẩm đã chọn, vui lòng đánh dấu chọn để
+                                  nhận được sự phục vụ tốt nhất từ nhân viên kỹ
+                                  thuật của FPT Shop.</span
+                                ></label
+                              >
+                            </div>
+                            <div class="checkbox margin-right-2x">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="check11ccc"
+                                required=""
+                              />
+                              <label class="form-check-label" for="exportOrder"
+                                >Xuất hoá đơn công ty
+                                <span
+                                  data-info="Xuất hóa đơn đỏ"
+                                  class="icon-help-circled i-cl-export"
+                                ></span
+                                ><span
+                                  class="cl-export-order"
+                                  style="color: rgb(62, 102, 136)"
+                                  >Nếu quý khách có nhu cầu xuất hoá đơn cho đơn
+                                  hàng, vui lòng đánh dấu chọn và điền thông
+                                  tin, hệ thống sẽ xuất hóa đơn theo thông tin
+                                  quý khách đã nhập.</span
+                                ></label
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="c-cart__payment__line c-cart__payment__bottom c-cart__form__line c-cart__form__line--col"
+                          >
+                            <input
+                              type="text"
+                              name=""
+                              id=""
+                              class="cs-input margin-right-2x cs-input--lg cs-input-size--half"
+                              placeholder="Nhập tên công ty*"
+                            />
+                            <input
+                              type="text"
+                              name=""
+                              id=""
+                              class="cs-input cs-input--lg cs-input-size--half"
+                              placeholder="Nhập mã số thuế*"
+                            />
+                            <input
+                              type="text"
+                              name=""
+                              id=""
+                              class="cs-input cs-input--lg cs-input-size--full"
+                              placeholder="Nhập địa chỉ*"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-cart__form__block">
+                  <div class="c-cart__form__line">
+                    <div
+                      class="cs-toast cs-toast-normal cs-toast--warning margin-top margin-bottom-empty"
+                    >
+                      <span class="icon-exclamation icon-circle"></span>
+                      <div>
+                        Sản phẩm tạm hết hàng tại shop. Đặt cọc 10% giá trị đơn
+                        hàng (tối thiểu 150.000đ) hoặc thanh toán toàn bộ để vận
+                        chuyển hàng về shop.
+                      </div>
+                    </div>
+                    <div class="c-cart__title">
+                      <div class="text--lg text-size--lg text-color-title">
+                        Chọn hình thức đặt cọc
+                      </div>
+                      <div class="c-cart__eye-brow">
+                        <i>(Lưu ý: Không hoàn lại phí)</i>
+                      </div>
+                    </div>
+
+                    <div class="c-cart__payment">
+                      <div class="c-cart__payment__wrap">
+                        <div class="radio margin-right-2x">
+                          <input
+                            type="radio"
+                            value=""
+                            name="deli"
+                            id="radio-cart31"
+                            class="js--tabs-child"
+                            data-toggle="c-cart__payment1"
+                          />
+                          <label for="radio-cart31">
+                            Cọc trước 10% giá trị đơn hàng:
+                            <span class="cs-price--main">1.000.000đ</span>
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <input
+                            type="radio"
+                            value=""
+                            name="deli"
+                            class="js--tabs-child"
+                            id="radio-cart41"
+                            data-toggle="c-cart__payment2"
+                          />
+                          <label for="radio-cart41">Thanh toán toàn bộ</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-cart__form">
+                <div class="c-cart__form__block">
+                  <div class="c-cart__title">Chọn hình thức thanh toán</div>
+                  <ul
+                    class="c-cart__form__list c-cart__type-payment js--cart__tabs"
+                  >
+                    <li>
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          value=""
+                          name="cart2"
+                          class="js--tabs-child"
+                          id="ra1b"
+                        />
+                        <label for="ra1b">Trả tiền mặt khi nhận hàng</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          value=""
+                          name="cart2"
+                          class="js--tabs-child"
+                          id="ra2b"
+                          data-toggle="exp-2"
+                        />
+                        <label for="ra2b"
+                          >Thẻ ATM nội địa/ Internet Banking</label
+                        >
+                      </div>
+                      <div
+                        class="c-cart__form__list__expand js--cart__tabs-item"
+                        id="exp-2"
+                        style="display: block"
+                      >
+                        <div class="c-cart__searchBox margin-bottom">
+                          <div class="cs-suggest__wrapper js--search-product">
+                            <div class="cs-input-group cs-input-group--search">
+                              <input
+                                type="text"
+                                name=""
+                                id=""
+                                class="cs-input cs-input--lg js--input-w-product"
+                              />
+                              <span class="icon-search cs-input-search"></span>
+                            </div>
+                            <ul class="cs-suggest js--suggestion-w-product">
+                              <li class="cs-suggest__item active">
+                                <div class="img img--md margin-right">
+                                  <img
+                                    src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="info">
+                                  <h3 class="text-normal text-size--lg">
+                                    Ngân hàng thương mại cổ phần Ngoại thương
+                                    Việt Nam (Vietcombank)
+                                  </h3>
+                                </div>
+                              </li>
+                              <li class="cs-suggest__item">
+                                <div class="img img--md margin-right">
+                                  <img
+                                    src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="info">
+                                  <h3 class="text-normal text-size--lg">
+                                    Ngân hàng thương mại cổ phần Ngoại thương
+                                    Việt Nam (Vietcombank)
+                                  </h3>
+                                </div>
+                              </li>
+                              <li class="cs-suggest__item">
+                                <div class="img img--md margin-right">
+                                  <img
+                                    src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="info">
+                                  <h3 class="text-normal text-size--lg">
+                                    Ngân hàng thương mại cổ phần Ngoại thương
+                                    Việt Nam (Vietcombank)
+                                  </h3>
+                                </div>
+                              </li>
+                              <li class="cs-suggest__item">
+                                <div class="img img--md margin-right">
+                                  <img
+                                    src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="info">
+                                  <h3 class="text-normal text-size--lg">
+                                    Ngân hàng thương mại cổ phần Ngoại thương
+                                    Việt Nam (Vietcombank)
+                                  </h3>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="c-cart__select">
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/VCB.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/BIDV.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/alepay/ACB.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="cs-toast cs-toast--success">
+                          <span class="icon-ok-circled"></span>
+                          Đã chọn
+                          <strong class="text-size--lg">Ngân hàng BIDV</strong>
+                        </div>
+                        <div class="cs-toast cs-toast--danger">
+                          <span class="icon-ok-circled"></span>
+                          Đã chọn
+                          <strong class="text-size--lg">Ngân hàng BIDV</strong>
+                        </div>
+                        <div class="cs-toast cs-toast--warning">
+                          <span class="icon-check-new icon-circle"></span>
+                          Đã chọn
+                          <strong class="text-size--lg">Ngân hàng BIDV</strong>
+                        </div>
+                        <div
+                          class="cs-toast cs-toast-normal cs-toast--warning"
+                          id="war-not--stock"
+                        >
+                          <span class="icon-exclamation icon-circle"></span>
+                          <div id="tx-war-not--stock">
+                            Áp dụng thành công giảm thêm 3%. Ưu đãi dành cho
+                            thành viên F.Friends.
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          value=""
+                          name="cart2"
+                          class="js--tabs-child"
+                          id="ra3b"
+                          data-toggle="exp-3"
+                        />
+                        <label for="ra3b"
+                          >Thanh toán bằng thẻ quốc tế Visa, Master, JCB</label
+                        >
+                      </div>
+                      <div
+                        class="c-cart__form__list__expand js--cart__tabs-item"
+                        id="exp-3"
+                      >
+                        <div class="c-cart__select">
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/31master.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="c-cart__select__item">
+                            <img
+                              src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/32jcb.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="cs-toast cs-toast--success">
+                          <span class="icon-ok-circled"></span>
+                          Đã chọn <strong class="text-size--lg">Visa</strong>
+                        </div>
+                      </div>
+                      <span
+                        class="cls-text--desc"
+                        data-promotion="VNPAYATM"
+                        style="color: #2f855a"
+                        >Nhập mã VNPAY300 giảm 5% tối đa 300k cho tất cả sản
+                        phẩm. (Áp dụng cho QRCODE ngân hàng: Agribank, BIDV,
+                        VietinBank, Vietcombank, SCB, IVB, Ocean Bank, ABBank,
+                        Eximbank, HDBank, SeABank, Nam A Bank, VietBank, BIDC,
+                        SaiGonBank).</span
+                      >
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          value=""
+                          name="cart2"
+                          class="js--tabs-child"
+                          id="ra4b"
+                          data-toggle="exp-4"
+                        />
+                        <label for="ra4b">Thanh toán bằng SmartPay</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                        <input
+                          type="radio"
+                          value=""
+                          name="cart2"
+                          class="js--tabs-child"
+                          id="ra5b"
+                          data-toggle="exp-5"
+                          disabled
+                        />
+                        <label for="ra5b">Thanh toán bằng trả góp</label>
+                      </div>
+                      <div
+                        class="c-cart__form__list__expand js--cart__tabs-item"
+                        id="exp-5"
+                      >
+                        <div class="c-cart__amor">
+                          <div class="c-cart__amor__item">
+                            <div class="radio">
+                              <input
+                                type="radio"
+                                value=""
+                                name="cart21"
+                                id="ra5b1"
+                              />
+                              <label for="ra5b1">
+                                <div class="text-size--lg">
+                                  Lãi suất 0% kỳ hạn 06 tháng bằng thẻ tín dụng
+                                </div>
+                                (HSBC, ANZ, Sacombank, Shinhanbank, Citibank,
+                                VPBank, Eximbank, VIB) -
+                                <a href="#" class="re-link">Xem chi tiết</a>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="c-cart__amor__item">
+                            <div class="radio">
+                              <input
+                                type="radio"
+                                value=""
+                                name="cart21"
+                                id="ra5b12"
+                              />
+                              <label for="ra5b12">
+                                <div class="text-size--normal">
+                                  Lãi suất 0% kỳ hạn 12 tháng cho chủ thẻ tín
+                                  dụng
+                                </div>
+                                (HSBC, VIB, Shinhanbank và Sacombank) -
+                                <a href="#" class="re-link">Xem chi tiết</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        class="cls-text--desc disabled"
+                        data-promotion="VNPAYATM"
+                        style="color: #2f855a"
+                        >Nhập mã VNPAY300 giảm 5% tối đa 300k cho tất cả sản
+                        phẩm. (Áp dụng cho QRCODE ngân hàng: Agribank, BIDV,
+                        VietinBank, Vietcombank, SCB, IVB, Ocean Bank, ABBank,
+                        Eximbank, HDBank, SeABank, Nam A Bank, VietBank, BIDC,
+                        SaiGonBank).</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="c-cart__submit">
+                <button class="btn btn-xl btn-primary">
+                  TIẾN HÀNH THANH TOÁN
+                </button>
+                <p>
+                  Bằng cách đặt hàng, bạn đồng ý với
+                  <a href="#" class="re-link--gray"
+                    ><u>Điều khoản sử dụng</u></a
+                  >
+                  của FPT Shop
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- JsCall -->
+    <script src="js/functions.js"></script>
+  </body>
+</html>

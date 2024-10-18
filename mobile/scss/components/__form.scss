@@ -1,0 +1,21 @@
+.radio {
+	input[type='radio'] {
+		&:before,
+		&:after {
+			width: 16px;
+			height: 16px;
+		}
+		&:checked {
+			&:before {
+				-webkit-transform: scale(0.625);
+				-ms-transform: scale(0.625);
+				-o-transform: scale(0.625);
+				transform: scale(0.625);
+				background: $red-500;
+			}
+			&:after {
+				background: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,195 @@
+// custom for rumor page
+.l-cate {
+    .l-rd-header {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+.l-rd {
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        box-shadow: 0px -1px 0px 0px #edeeef inset;
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            color: #0664f9;
+        }
+        .st {
+            &-badge {
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                background: #edeeef;
+                border: 1px solid #edeeef;
+                color: #6a737a;
+                padding: 5px 15px;
+                border-radius: 4px;
+                margin-left: 8px;
+            }
+        }
+    }
+    &-header {
+        background: $white;
+        box-shadow: 0px 1px 4px rgba(10, 10, 10, 0.15);
+        .st-form {
+            background-color: #f8f9fa;
+        }
+    }
+    &-row {
+        padding: 32px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-left,
+    &-right {
+        width: calc((100% - 24px) / 2);
+    }
+    .st {
+        &-slider {
+            margin: 0;
+            padding: 16px 0 22px;
+            .swiper-wrapper {
+                margin-bottom: 24px;
+            }
+        }
+        &-pagination {
+            position: relative;
+        }
+        &-form {
+            padding: 24px;
+            .btn {
+                margin-top: 16px;
+                padding: 17px 31px;
+            }
+            .title {
+                color: #212529;
+                margin-bottom: 8px;
+            }
+            .into-elevated {
+                margin-bottom: 16px;
+            }
+            &__line {
+                align-items: baseline;
+                justify-content: space-between;
+                margin-bottom: 8px;
+                input {
+                    &::placeholder {
+                        color: #939ca3;
+                    }
+                }
+            }
+            .cs-input-group {
+                flex: unset;
+                width: 100%;
+                &.st-gr-half {
+                    width: calc((100% - 16px) / 2);
+                }
+            }
+            .cs-input.is-invalid {
+                border-color: $danger-500;
+                &:hover {
+                    border-color: $danger-600;
+                }
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem $danger-200;
+                }
+                &~.feedback {
+                    flex-basis: 100%;
+                    margin-top: $margin;
+                    .stack {
+                        // border: solid 1px $danger-200;
+                        // background-color: $danger-100;
+                        color: $danger-700;
+                        span {
+                            display: none;
+                            color: $danger-500;
+                        }
+                    }
+                }
+            }
+        }
+        &-rd-contact {
+            .hotline {
+                text-align: center;
+                font-size: 14px;
+                line-height: 14px;
+                color: #444b52;
+            }
+            .re-hotline {
+                &:hover,
+                &:active,
+                &:focus {
+                    color: #cb1c22;
+                }
+            }
+        }
+    }
+    .c-pv {
+        width: calc(100% / 4);
+        padding: 12px;
+        margin-bottom: 0;
+        &__img {
+            width: 100%;
+            height: 210px;
+            margin-bottom: 16px;
+        }
+        &__name {
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+        }
+        &__price {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+        }
+    }
+    .l-pd-body {
+        .form-wrapper {
+            margin-bottom: 24px;
+        }
+        &__right {
+            .st-form {
+                padding: 24px 20px;
+                background-color: $white;
+                box-shadow: 0 0 3px 0 #dee2e6;
+            }
+        }
+    }
+    .l-pd {
+        &-products {
+            margin-bottom: 24px;
+        }
+        &-body__wrapper {
+            margin-bottom: 24px;
+        }
+    }
+    .st-pd-content {
+        max-height: 890px;
+        overflow: hidden;
+        margin-bottom: 4px;
+    }
+    .st-button-overlay {
+        padding: 24px 0 12px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, #ffffff 97.91%);
+        bottom: 12px;
+    }
+    .st-card--article {
+        &.card {
+            height: auto;
+            position: relative;
+            padding: 16px 20px 12px;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>FPTShop</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.footer.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/icon-fptshop.css" />
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- jsLib -->
+    <script src="js/libs/jquery-3.2.0.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+    <script src="js/libs/lightgallery-all.min.js"></script>
+    <script src="js/libs/lightslider.min.js"></script>
+    <script src="js/libs/spritespin.js"></script>
+    <script src="js/header-footer.js"></script>
+
+    <script src="js/util.js"></script>
+    <script src="js/modal.js"></script>
+  </head>
+  <body>
+    <div
+      class="btn btn-primary btn-xl btn-full js--open--normal"
+      aria-controls="js--address"
+    >
+      <div>Mở popup sổ địa chỉ</div>
+    </div>
+    <div
+      class="btn btn-primary btn-xl btn-full js--open--normal "
+      aria-controls="js--edit-address"
+    >
+      <div>Mở popup sửa đổi sổ địa chỉ</div>
+    </div>
+    <div class="address">
+      <div class="item">
+        <div class="wrap">
+          <p class="user-name">Nguyễn Hạ Lam</p>
+          <p class="user-phone">0984531654</p>
+        </div>
+        <p class="user-loca">
+          192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+        </p>
+      </div>
+      <div class="change-btn">Thay đổi</div>  
+    </div>
+    <div class="no-address active">
+      <div class="input-group">
+          <input type="text"  class="cs-input cs-input-size--full cs-input--lg" placeholder="Nhập tên">
+          <div class="feedback " >
+              <div class="stack">
+                  <span class="icon-minus-circled"></span>
+                  <div id="tx-err-Email">aaa</div>
+              </div>
+          </div>
+      </div>
+      <div class="input-group">
+        <input type="text" class="cs-input cs-input-size--full cs-input--lg" placeholder="Nhập điện thoại" >
+          <div class="feedback " >
+              <div class="stack">
+                  <span class="icon-minus-circled"></span>
+                  <div id="tx-err-Email">bbb</div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div
+      class="modal modal-type2 js-modal popup-address js--popup-dropdown js--popup-normal"
+      id="js--address"
+      data-animation="on"
+    >
+      <div class="c-modal__wrapper">
+        <div class="c-modal__box">
+          <div class="card">
+            <div class="card-title">
+              Chọn Địa Chỉ Nhận Hàng
+              <span class="c-modal--close js-modal__close">
+                <i class="ic-angle-left"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="c-fs__location user-location">
+                <ul>
+                  <li>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value="radio-location"
+                        name="radio-location"
+                        id="location1"
+                      />
+                      <label for="location1">
+                        <p class="user-name">Nguyễn Hạ Lam</p>
+                        <p class="user-phone">0984531654</p>
+                      </label>
+                      <p class="user-loca">
+                        192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value="radio-location"
+                        name="radio-location"
+                        id="location2"
+                      />
+                      <label for="location2">
+                        <p class="user-name">Nguyễn Hạ Lam</p>
+                        <p class="user-phone">0984531654</p>
+                      </label>
+                      <p class="user-loca">
+                        192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value="radio-location"
+                        name="radio-location"
+                        id="location3"
+                      />
+                      <label for="location3">
+                        <p class="user-name">Nguyễn Hạ Lam</p>
+                        <p class="user-phone">0984531654</p>
+                      </label>
+                      <p class="user-loca">
+                        192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value="radio-location"
+                        name="radio-location"
+                        id="location4"
+                      />
+                      <label for="location4">
+                        <p class="user-name">Nguyễn Hạ Lam</p>
+                        <p class="user-phone">0984531654</p>
+                      </label>
+                      <p class="user-loca">
+                        192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value="radio-location"
+                        name="radio-location"
+                        id="location5"
+                      />
+                      <label for="location5">
+                        <p class="user-name">Nguyễn Hạ Lam</p>
+                        <p class="user-phone">0984531654</p>
+                      </label>
+                      <p class="user-loca">
+                        192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        value="radio-location"
+                        name="radio-location"
+                        id="location6"
+                      />
+                      <label for="location6">
+                        <p class="user-name">Nguyễn Hạ Lam</p>
+                        <p class="user-phone">0984531654</p>
+                      </label>
+                      <p class="user-loca">
+                        192A Nguyễn Thị Định, P. An Phú , Quận 2, Hồ Chí Minh
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="group-btn">
+                  <button class="btn btn-outline-grayscale btn-md m-r-8">
+                    Quản lý sổ địa chỉ
+                  </button>
+                  <button class="btn btn-primary">Thêm mới địa chỉ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal js-modal popup-edit-address js--popup-dropdown js--popup-normal"
+      id="js--edit-address"
+      data-animation="on"
+    >
+      <div class="c-modal__wrapper">
+        <div class="c-modal__box">
+          <div class="card">
+            <div class="card-title">
+              Thêm địa chỉ mới
+              <span class="c-modal--close js-modal__close">
+                <i class="ic-angle-left"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="c-dropdown c-dropdown--col">
+                <div class="c-dropdown-button c-dropdown-button--lg">
+                  Chọn Tỉnh/thành
+                  <span class="icon-arrow-combo"></span>
+                </div>
+                <div class="c-dropdown-menu">
+                  <div class="c-dropdown-menu__top">
+                    <div class="c-dropdown-menu__search">
+                      <div class="cs-input-group cs-input-group--search">
+                        <input type="text" name="" id="" class="cs-input">
+                        <span class="icon-search cs-input-search"></span>
+                        <span class="icon-cancel cs-input-clear js--dropdown-search-mobile--clear"></span>
+                      </div>
+                      <a href="#" class="st-search__close js--search-mobile__close re-blue">Huỷ bỏ</a>
+                    </div>
+                  </div>
+                  <div class="c-dropdown-menu__wrapper">
+                    <a href="#" class="active">Hà Nội</a>
+                    <a href="#">Hồ Chí Minh</a>
+                    <a href="#">Đồng Tháp</a>
+                    <a href="#">Đồng nai</a>
+                    <a href="#">Thái Nguyên</a>
+                    <a href="#">Gia Lai</a>
+                    <a href="#">Nha Trang</a>
+                    <a href="#">Quãng Ngãi</a>
+                    <a href="#">An Giang</a>
+                    <a href="#">Cà Mau</a>
+                    <a href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+              <div class="c-dropdown c-dropdown--col">
+                <div class="c-dropdown-button c-dropdown-button--lg">
+                  Chọn Quận/Huyện
+                  <span class="icon-arrow-combo"></span>
+                </div>
+                <div class="c-dropdown-menu">
+                  <div class="c-dropdown-menu__top">
+                    <div class="c-dropdown-menu__search">
+                      <div class="cs-input-group cs-input-group--search">
+                        <input type="text" name="" id="" class="cs-input">
+                        <span class="icon-search cs-input-search"></span>
+                        <span class="icon-cancel cs-input-clear js--dropdown-search-mobile--clear"></span>
+                      </div>
+                      <a href="#" class="st-search__close js--search-mobile__close re-blue">Huỷ bỏ</a>
+                    </div>
+                  </div>
+                  <div class="c-dropdown-menu__wrapper">
+                    <a href="#" class="active">Hà Nội</a>
+                    <a href="#">Hồ Chí Minh</a>
+                    <a href="#">Đồng Tháp</a>
+                    <a href="#">Đồng nai</a>
+                    <a href="#">Thái Nguyên</a>
+                    <a href="#">Gia Lai</a>
+                    <a href="#">Nha Trang</a>
+                    <a href="#">Quãng Ngãi</a>
+                    <a href="#">An Giang</a>
+                    <a href="#">Cà Mau</a>
+                    <a href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+              <div class="c-dropdown c-dropdown--col">
+                <div class="c-dropdown-button c-dropdown-button--lg">
+                  Chọn Phường/Xã
+                  <span class="icon-arrow-combo"></span>
+                </div>
+                <div class="c-dropdown-menu">
+                  <div class="c-dropdown-menu__top">
+                    <div class="c-dropdown-menu__search">
+                      <div class="cs-input-group cs-input-group--search">
+                        <input type="text" name="" id="" class="cs-input">
+                        <span class="icon-search cs-input-search"></span>
+                        <span class="icon-cancel cs-input-clear js--dropdown-search-mobile--clear"></span>
+                      </div>
+                      <a href="#" class="st-search__close js--search-mobile__close re-blue">Huỷ bỏ</a>
+                    </div>
+                  </div>
+                  <div class="c-dropdown-menu__wrapper">
+                    <a href="#" class="active">Hà Nội</a>
+                    <a href="#">Hồ Chí Minh</a>
+                    <a href="#">Đồng Tháp</a>
+                    <a href="#">Đồng nai</a>
+                    <a href="#">Thái Nguyên</a>
+                    <a href="#">Gia Lai</a>
+                    <a href="#">Nha Trang</a>
+                    <a href="#">Quãng Ngãi</a>
+                    <a href="#">An Giang</a>
+                    <a href="#">Cà Mau</a>
+                    <a href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+              <div class="cs-input-group">
+                <input type="text" name="" id="" class="cs-input cs-input--lg w100" placeholder="Nhập địa chỉ">
+                <div class="feedback">
+                  <div class="stack">
+                    <span class="icon-cancel-circled"></span>
+                    Thông tin bắt buộc
+                  </div>
+                </div>
+              </div>
+              <div class="checkbox checkbox-xl m-b-24">
+								<input type="checkbox" value="checkbox3" name="Type12" id="type12">
+								<label for="type12" class="label label-xl">
+									<span class="label-text f-w-400">Chọn làm địa chỉ mặc định</span>
+								</label>
+							</div>
+              <button class="btn btn-primary btn-md">HOÀN TẤT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/functions.js"></script>
+  </body>
+</html>

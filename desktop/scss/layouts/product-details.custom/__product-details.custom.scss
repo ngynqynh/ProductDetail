@@ -1,0 +1,160 @@
+.lg {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	$this: &;
+	&-backdrop{
+		z-index: 3000000000;
+	}
+	&-inner {
+		// max-height: calc(100% - 100px - 60px);
+		#{$this}-object {
+			transform: none;
+		}
+	}
+	&-outer {
+		z-index: 3000000000;
+		#{$this}-inner {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			#{$this}-item {
+				max-width: 960px;
+				text-align: center;
+			}
+			#{$this}-image {
+				border-radius: 8px;
+			}
+		}
+		#{$this}-thumb-outer {
+			position: relative;
+			height: 100px !important;
+			transform: translate3d(0, 0%, 0);
+			.lg-toogle-thumb {
+				display: none;
+			}
+			.lg-thumb {
+				margin: 0 auto;
+				&-item {
+					opacity: 0.7;
+					&.active {
+						opacity: 1;
+						border: solid 2px $red-500;
+					}
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.lg-img-wrap {
+			padding: 60px 0 0;
+		}
+	}
+	&-toolbar {
+		background: none;
+	}
+	&-sub-html {
+		background: none;
+		bottom: unset !important;
+		top: 24px;
+		padding: 0;
+		@extend .typo-headline;
+	}
+	&-video-cont {
+		max-width: 100% !important;
+		height: 640px !important;
+		padding: 0;
+	}
+	&-video {
+		padding-bottom: 67.37% !important;
+	}
+	&-icon {
+		font-family: 'icon' !important;
+	}
+	&-actions {
+		#{$this}-next,
+		#{$this}-prev {
+			padding: 0;
+			font-size: 31px;
+		}
+		#{$this}-next {
+			&:after {
+				// content: '\e90e';
+				content: "\e808";
+			}
+		} 
+		#{$this}-prev {
+			&:after {
+				// content: '\e90b';
+				content: "\e80b";
+			}
+		}
+	}
+	#lg-zoom-in:after {
+		// content: '\ea19';
+		content: "\e948";
+	}
+	#lg-zoom-out {
+		&:after {
+			// content: '\ea1a';
+			content: "\e947";
+		}
+	}
+	.lg-zoomed #lg-zoom-out {
+		cursor: pointer;
+		// pointer-events: auto;
+	}
+	&-fullscreen {
+		&:after {
+			// content: '\e961';
+			content: "\e93e";
+		}
+		&-on & {
+			&:after {
+				// content: '\e9aa';
+				content: "\e942";
+			}
+		}
+	}
+	&-autoplay-button:after {
+		// content: '\e9b9';
+		content: "\e945";
+	}
+	&-show-autoplay {
+		#{$this}-autoplay-button:after {
+			// content: '\e9b3';
+			content: "\e943";
+		}
+	}
+	&-toolbar {
+		padding: 0 20px;
+		margin-top: 20px;
+		#{$this}-download:after {
+			// content: '\e959'; 
+			content: "\e93d";
+		}
+		#{$this}-close:after {
+			// content: '\e948';
+			content: "\e93b";
+		}
+		#{$this}-icon {
+			padding: 0;
+			height: auto;
+			width: auto;
+			margin: 0 8px;
+			line-height: 40px;
+			cursor: pointer;
+		}
+	}
+	#lg-counter {
+		border-radius: 4px;
+		background-color: rgba(255, 255, 255, 0.15);
+		padding: 0;
+		@include textType(16px, 16px);
+		padding: 6px 8px;
+		color: #edeeef;
+	}
+}
+
+

@@ -1,0 +1,22 @@
+.e-vm {
+	display: block;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	i {
+		font-size: 12px;
+		margin-left: 3px;
+	}
+	.icon-spin {
+		display: inline-block;
+		animation-name: spin;
+		animation-duration: 1.2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	&,
+	&:hover,
+	&:focus {
+		color: #0058d6;
+	}
+}

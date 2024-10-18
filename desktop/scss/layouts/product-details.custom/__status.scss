@@ -1,0 +1,36 @@
+.st-stt {
+	.st-pd-normal {
+		justify-content: center;
+	}
+	.st-pd-btn {
+		.btn-full {
+			margin-bottom: 0;
+			padding: 14px 32px;
+		}
+	}
+	// end custom
+	&__noti {
+		padding: 16px 20px;
+		border-radius: 4px;
+		border: solid 1px $gray-200;
+		background: $gray-100;
+		margin-bottom: 16px;
+		display: flex;
+		align-items: center;
+		span {
+			color: #939ca3;
+			font-size: 24px;
+		}
+		p {
+			@extend .typo-into-elevated;
+			margin-left: 8px;
+			margin-bottom: 0;
+		}
+	}
+	.btn-dchv,
+	.btn-dht {
+		.btn {
+			padding: 8px 32px;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import './_question';
+@import './_news';
+@import './_productViewed';
+@import './_rate-star';
+@import './_progress';
+@import './_comment';
+@import './_modal';
+@import './_dropdown';
+@import './_find-shop';
+@import './_product'; 
+@import './_product-old';  
+@import './_popup';  
+@import './_tooltip';  
+@import './_spinner';  
+@import './_slider';  
+@import './_stepper';  
+//21/10/22 
+@import './_nouislider';
+//12/11
+@import './_form';
+
+
+// maybe remove when deploy 
+@import './_temporary';    
+
+// new update 
+@import './_stack';      
+
+// update from design system  
+// @import './design-system/abstracts/_mixins';
+// @import './design-system/abstracts/_variables';
+// @import './design-system/components/all';

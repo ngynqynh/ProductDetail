@@ -1,0 +1,84 @@
+.product-cart__quality__wrap .btn {
+  font-size: 12px;
+}
+.c-cart {
+  .card-title {
+    font-weight: 500;
+  }
+  .icon-arrow-combo:before {
+    font-size: 16px;
+  }
+  &__form__line .text {
+    @include textType(14px, 20px);
+  }
+  .checkbox {
+    input {
+      margin-right: 8px;
+    }
+  }
+  .feedback {
+    padding-left: 0;
+  }
+}
+.c-fs__block {
+  .ic-xs {
+    &.ic-circle,
+    &.ic-circle-outline {
+      font-size: 10px;
+    }
+  }
+  .radio {
+    input {
+      align-self: baseline;
+      margin-top: 4px;
+    }
+  }
+}
+
+.cdt-product__config__param span {
+  display: inline-flex;
+  align-items: center;
+  i {
+    font-size: 16px;
+  }
+}
+.custom-shop {
+  .modal-header {
+    position: relative;
+  }
+  .c-modal--close {
+    top: 50%;
+  }
+}
+.cs-input.is-invalid ~ .feedback .stack {
+  vertical-align: middle;
+}
+.lg-actions .lg-next:before {
+  display: none;
+}
+.fs-mnul > li > a > i {
+  font-size: 16px;
+}
+.fs-mnul > li > a > i.icon-laptop,
+.fs-mnul > li > a > i.icon-tablet,
+.fs-mnul > li > a > i.icon-glasses,
+.fs-mnul > li > a > i.icon-phone_iphone,
+.fs-mnul > li > a > i.icon-apple {
+  font-size: 16px;
+}
+.demo-icon.icon-mobile:before {
+  content: "\e9ac" !important;
+}
+.demo-icon.icon-we {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.demo-icon.icon-we:before {
+  font-size: 60px;
+  line-height: 20px;
+}
+.demo-icon.icon-supp:before {
+  content: "\e97e";
+}

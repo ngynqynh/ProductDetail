@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<title>FPTShop</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link rel="icon" href="images/favicon.ico" />
+
+		<!-- Css -->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/header.footer.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/icon-fptshop.css" />
+		<link rel="stylesheet" href="css/lightslider.min.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/lightgallery.css" />
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- jsLib -->
+		<script src="js/libs/jquery-3.2.0.min.js"></script>
+		<script src="js/libs/swiper.min.js"></script>
+		<script src="js/libs/lightgallery-all.min.js"></script>
+		<script src="js/libs/lightslider.min.js"></script>
+		<script src="js/libs/spritespin.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/modal.js"></script>
+		<style>
+			.wrap {
+				padding: 50px 0;
+			}
+			.row {
+				flex-direction: column;
+			}
+			.center {
+				display: flex;
+				justify-content: center;
+			}
+			h2 {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+			.flex {
+				display: flex;
+			}
+			.w100 {
+				width: 100%;
+			}
+			.w50 {
+				width: calc(50% - 8px);
+			}
+			.inner {
+				width: 490px;
+				margin: 0 auto 40px;
+				display: flex;
+				align-items: baseline;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body class="">
+		<div class="container wrap">
+			<div class="row">
+				<h2 class="text-center">Buttons</h2>
+				<div class="inner" style="display: flex;">
+					<div class="text--lg text-size--lg margin-bottom">Mã giảm giá</div>
+					<br>
+					<button class=" btn btn-xl btn-primary margin-right">Lorem</button>
+					<br>
+					<button class=" btn btn-xl btn-secondary margin-right">Lorem</button>
+					<br>
+					<button class=" btn btn-xl btn-info margin-right">Lorem</button>
+					<br>
+					<button class=" btn btn-xl btn-warning margin-right">Lorem</button>
+					<br>
+					<button class=" btn btn-xl btn-success margin-right">Lorem</button>
+					
+				</div>
+				<div class="inner">
+					<div class="text--lg text-size--lg margin-bottom">Text</div>
+					<a href="#" class="re-link" style="    align-self: baseline;">Lorem ipsum dolor sit.</a>
+					<a href="#" class="re-link--normal" style="    align-self: baseline;">Lorem ipsum dolor sit.</a>
+				</div>
+				
+				<div class="inner">					
+					<div class="text--lg text-size--lg margin-bottom">Mã giảm giá</div>
+					<div class="cs-input-group">
+						<input type="text" name="" id="" class="cs-input" placeholder="Nhập mã giảm giá" />
+						<button class="cs-btn btn btn-primary">Áp dụng</button>
+					</div>
+				</div>
+				<div class="inner">
+					<div class="text--lg text-size--lg margin-bottom">Mã giảm giá</div>
+					<div class="cs-input-group">
+						<input type="text" name="" id="" class="cs-input is-invalid" placeholder="Nhập mã giảm giá" />
+						<button class="cs-btn btn btn-primary">Áp dụng</button>
+						<div class="feedback">
+							<div class="stack">
+								<span class="icon-cancel-circled"></span>
+								Thông tin bắt buộc
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="inner">
+					<div class="text--lg text-size--lg margin-bottom">Mã giảm giá</div>
+					<div class="cs-input-group">
+						<input type="text" name="" id="" class="cs-input is-valid" placeholder="Nhập mã giảm giá" />
+						<button class="cs-btn btn btn-primary">Áp dụng</button>
+						<div class="feedback">
+							<div class="stack">
+								<span class="icon-ok-circled"></span>
+								Look goood!
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="inner">
+					<div class="text--lg text-size--lg margin-bottom">Mã giảm giá</div>
+					<div class="cs-tags cs-tags--primary">
+						<div class="cs-tag">
+							<div>GIAM50</div>
+							<span class="icon-close"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2 class="text-center">Thông tin lỗi</h2>
+				<div class="inner">
+					<div class="row margin-bottom-2x">
+						<div class="cs-input-group margin-bottom was-validated">
+							<div class="radio margin-right-2x">
+								<input type="radio" value="" name="cart1" id="radio-cart1" />
+								<label for="radio-cart1">Anh</label>
+							</div>
+							<div class="radio">
+								<input type="radio" value="" name="cart1" id="radio-cart2" />
+								<label for="radio-cart2">Chị</label>
+							</div>
+						</div>
+						<div class="cs-input-group margin-bottom  was-validated">
+							<div class="checkbox margin-right-2x">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value=""
+									id="check1"
+									required=""
+									data-toggle="c-cart__member--ff"
+								/>
+								<label class="form-check-label" for="check1"> F.Friends </label>
+							</div>
+							<div class="checkbox margin-right-2x">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value=""
+									id="check12"
+									required=""
+									data-toggle="c-cart__member--fm"
+								/>
+								<label class="form-check-label" for="check12"> FPT Member </label>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-bottom-2x">
+						<div class="text--lg text-size--lg margin-bottom">Mã giảm giá</div>
+						<div class="flex margin-bottom-2x">
+							<div class="cs-input-group margin-right-2x">
+								<input
+									type="text"
+									name=""
+									id=""
+									class="cs-input cs-input--lg w100 is-invalid"
+									placeholder="Nhập họ và tên*"
+								/>
+								<div class="feedback">
+									<div class="stack">
+										<span class="icon-cancel-circled"></span>
+										Thông tin bắt buộc
+									</div>
+								</div>
+							</div>
+							<div class="cs-input-group">
+								<input
+									type="text"
+									name=""
+									id=""
+									class="cs-input cs-input--lg w100 is-invalid"
+									placeholder="Nhập số điện thoại*"
+								/>
+								<div class="feedback">
+									<div class="stack">
+										<span class="icon-cancel-circled"></span>
+										Thông tin bắt buộc
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex margin-bottom-2x">
+							<div class="cs-input-group">
+								<input
+									type="text"
+									name=""
+									id=""
+									class="cs-input cs-input--lg w100 is-invalid"
+									placeholder="Nhập email*"
+								/>
+								<div class="feedback">
+									<div class="stack">
+										<span class="icon-cancel-circled"></span>
+										Địa chỉ email không đúng
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex margin-bottom-2x">
+							<div class="cs-input-group">
+								<input
+									type="text"
+									name=""
+									id=""
+									class="cs-input cs-input--lg w100 is-invalid"
+									placeholder="Nhập email*"
+								/>
+								<div class="feedback">
+									<div class="stack">
+										<span class="icon-cancel-circled"></span>
+										Số CMND không hợp lệ
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex">
+							<div class="w50">
+								<div class="c-dropdown w100 c-dropdown--col">
+									<div class="c-dropdown-button">
+										Chọn tỉnh/thành phố
+										<span class="icon-arrow-combo"></span>
+									</div>
+									<div class="c-dropdown-menu">
+										<div class="c-dropdown-menu__top">
+											<div class="c-dropdown-menu__search">
+												<div class="cs-input-group cs-input-group--search">
+													<input type="text" name="" id="" class="cs-input" />
+													<span class="icon-search cs-input-search"></span>
+												</div>
+											</div>
+										</div>
+										<div class="c-dropdown-menu__wrapper">
+											<a href="#" class="active">Hà Nội</a>
+											<a href="#">Hồ Chí Minh</a>
+											<a href="#">Đồng Tháp</a>
+											<a href="#">Đồng nai</a>
+											<a href="#">Thái Nguyên</a>
+											<a href="#">Gia Lai</a>
+											<a href="#">Nha Trang</a>
+											<a href="#">Quãng Ngãi</a>
+											<a href="#">An Giang</a>
+											<a href="#">Cà Mau</a>
+											<a href="#">Đà Nẵng</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex">
+							<div class="w50">
+								<div class="c-dropdown w100">
+									<div class="c-dropdown-button">
+										Chọn tỉnh/thành phố
+										<span class="icon-arrow-combo"></span>
+									</div>
+									<div class="c-dropdown-menu">
+										<div class="c-dropdown-menu__wrapper">
+											<a href="#" class="active">Hà Nội</a>
+											<a href="#">Hồ Chí Minh</a>
+											<a href="#">Đồng Tháp</a>
+											<a href="#">Đồng nai</a>
+											<a href="#">Thái Nguyên</a>
+											<a href="#">Gia Lai</a>
+											<a href="#">Nha Trang</a>
+											<a href="#">Quãng Ngãi</a>
+											<a href="#">An Giang</a>
+											<a href="#">Cà Mau</a>
+											<a href="#">Đà Nẵng</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="flex margin-bottom was-validated">
+							<div class="radio margin-right-2x">
+								<input type="radio" value="" name="cart12" id="radio-cart122" />
+								<label for="radio-cart122">Giao hàng tận nơi, miễn phí</label>
+							</div>
+							<div class="radio">
+								<input type="radio" value="" name="cart12" id="radio-cart222" />
+								<label for="radio-cart222">Nhận tại cửa hàng FPT Shop</label>
+							</div>
+							<div class="feedback">
+								<div class="stack">
+									<span class="icon-cancel-circled"></span>
+									Vui lòng chọn hình thức giao hàng
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2 class="text-center">Chọn ngân hàng</h2>
+				<div class="inner">
+					<div class="row margin-bottom-2x">
+						<div class="cs-suggest__wrapper js--search-product">
+							<div class="cs-input-group cs-input-group--search">
+								<input type="text" name="" id="" class="cs-input cs-input--lg js--input-w-product" />
+								<span class="icon-search cs-input-search"></span>
+							</div>
+							<ul class="cs-suggest js--suggestion-w-product">
+								<li class="cs-suggest__item">
+									<div class="img img--md margin-right">
+										<img src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg" alt="">
+									</div>
+									<div class="info">
+										<h3 class="text-normal text-size--lg">Ngân hàng thương mại cổ phần Ngoại thương Việt Nam (Vietcombank)</h3>
+									</div>
+								</li>
+								<li class="cs-suggest__item">
+									<div class="img img--md margin-right">
+										<img src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg" alt="">
+									</div>
+									<div class="info">
+										<h3 class="text-normal text-size--lg">Ngân hàng thương mại cổ phần Ngoại thương Việt Nam (Vietcombank)</h3>
+									</div>
+								</li>
+								<li class="cs-suggest__item">
+									<div class="img img--md margin-right">
+										<img src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg" alt="">
+									</div>
+									<div class="info">
+										<h3 class="text-normal text-size--lg">Ngân hàng thương mại cổ phần Ngoại thương Việt Nam (Vietcombank)</h3>
+									</div>
+								</li>
+								<li class="cs-suggest__item">
+									<div class="img img--md margin-right">
+										<img src="https://fptshop.com.vn/gio-hang-v2/Cart/Checkout/images/nh/30visa.jpg" alt="">
+									</div>
+									<div class="info">
+										<h3 class="text-normal text-size--lg">Ngân hàng thương mại cổ phần Ngoại thương Việt Nam (Vietcombank)</h3>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script src="js/functions.js"></script>
+</html>

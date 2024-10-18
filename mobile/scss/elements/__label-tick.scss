@@ -1,0 +1,71 @@
+// element
+.e-label-tick {
+   display: inline-block;
+   position: absolute;
+   bottom: 2px;
+   left: 2px;
+   &:before {
+      content: "";
+      position: absolute;
+      top: 1.5px;
+      left: 6px;
+      display: table;
+      width: 5px;
+      height: 11px;
+      border: 2px solid #fff;
+      border-top-width: 0;
+      border-left-width: 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+   }
+   &:after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #97a3b9;
+      border-radius: 4px;
+      -webkit-transition: 240ms;
+      -o-transition: 240ms;
+      transition: 240ms;
+      background-color: #cb1c22;
+      border-color: #cb1c22;
+      outline: none;
+   }
+}
+.e-label-pos {
+   display: inline-block;
+   position: absolute;
+   bottom: 2px;
+   left: 2px;
+   .checkbox {
+      .form-check-input {
+         &:before {
+            opacity: 0;
+            content: "\e94b";
+            font-family: "icon";
+            border: none;
+            transform: none;
+            font-size: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+         }
+         &:after {
+            background: $white;
+         }
+         &:checked {
+            &:before {
+               opacity: 1;
+            }
+         }
+      }
+   }
+}
